@@ -1,0 +1,68 @@
+.custom-text-box {
+    position: relative;
+    padding: 15px 17px 14px;
+    display: inline-flex;
+    border-radius: 3px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+}
+.custom-text-box svg {
+    width: 16px;
+    height: 16px;
+}
+.custom-text-box span.with-icon__beside {
+    font-size: 15px;
+    font-weight: 400;
+}
+.product-block.minventory-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.product-block.minventory-box span.cstm-inventory-icon {
+    left: 5px;
+    margin-right: 11px!important;
+    top: 0;
+    position: relative;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: #df0201;
+    border-radius: 50%;
+}
+.product-block.minventory-box span.cstm-inventory-icon:before {
+    background: #df0201;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    animation: inventory-animation 2s linear infinite;
+}
+.product-block.minventory-box p {
+    margin: 0;
+    width: calc(100% - 25px);
+}
+@keyframes inventory-animation{
+0% {
+    opacity: 0.5;
+}
+100% {
+    transform: scale(2.5);
+    opacity: 0;
+}
+}
+@media only screen and (max-width: 768px) {
+.sales-point .icon-and-text {
+    justify-content: left;
+   text-align: left;
+}
+.product-block.minventory-box {
+    text-align: left;
+}
+}
